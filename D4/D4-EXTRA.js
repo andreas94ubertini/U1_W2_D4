@@ -92,7 +92,7 @@ function maxShoppingCart(arr) {
       maxValue.push(shoppingCart[i])
     }
   }
-  console.log(maxValue[0])
+  console.log("L'articolo più costo del carrello: ", maxValue[0])
 }
 
 maxShoppingCart(shoppingCart)
@@ -103,6 +103,17 @@ maxShoppingCart(shoppingCart)
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+
+function latestShoppingCart(arr) {
+  let lastAdded = []
+  for (let i = 0; i < shoppingCart.length; i++) {
+    if (shoppingCart[i] === shoppingCart[shoppingCart.length - 1])
+      lastAdded.push(shoppingCart[i])
+  }
+  console.log("Ultimo articolo aggiunto: ", lastAdded[0])
+}
+
+latestShoppingCart(shoppingCart)
 
 /* EXTRA 6
  Crea una funzione chiamata "loopUntil" che riceve un numero intero come parametro con valore tra 0 e 9.
