@@ -72,6 +72,7 @@ function addToShoppingCart(added) {
     }
   }
   console.log(shoppingCart)
+  return shoppingCart
 }
 
 addToShoppingCart(added)
@@ -82,6 +83,19 @@ addToShoppingCart(added)
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+
+function maxShoppingCart(arr) {
+  let maxValue = [{ price: 0, name: null, id: null, quantity: null }]
+  for (let i = 0; i < shoppingCart.length; i++) {
+    if (shoppingCart[i].price > maxValue[0].price) {
+      maxValue.pop()
+      maxValue.push(shoppingCart[i])
+    }
+  }
+  console.log(maxValue[0])
+}
+
+maxShoppingCart(shoppingCart)
 
 /* EXTRA 5
  Nel tuo eCommerce disponi di un'array di oggetti chiamato "shoppingCart". Ognuno di questi oggetti ha le seguenti proprietà: "price", "name", "id" e "quantity".
