@@ -41,6 +41,16 @@ checkArray()
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+const shoppingCart = [{ price: 100, name: "jacket", id: 1, quantity: 3 }]
+function shoppingCartTotal() {
+  let toPay = 0
+  for (let i = 0; i < shoppingCart.length; i++) {
+    toPay += shoppingCart[i].price * shoppingCart[i].quantity
+  }
+  console.log(toPay, "da pagare")
+  return toPay
+}
+shoppingCartTotal()
 
 /* EXTRA 3
  Nel tuo eCommerce disponi di un'array di oggetti chiamato "shoppingCart". Ognuno di questi oggetti ha le seguenti proprietà: "price", "name", "id" e "quantity".
